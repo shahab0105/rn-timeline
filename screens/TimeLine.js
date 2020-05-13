@@ -3,6 +3,7 @@ import React from 'react';
 import Jumbotron from './blocks/Jumbotron';
 import ProfilePost from './blocks/ProfilePost';
 import ProfileMediaPost from './blocks/profileMediaPost';
+import timelineStyles from './styles/timeline';
 import {
   SafeAreaView,
   StyleSheet,
@@ -21,19 +22,20 @@ class TimeLine extends React.Component {
 
   render() {
     return (
-      //   <ScrollView>
-      <View
-        style={{flex: 1, backgroundColor: 'yellow', flexDirection: 'column'}}>
-        <Jumbotron />
-        <View id="Feed" style={{flex: 3, backgroundColor: 'red'}}>
-          <View id="postArea" style={{flex: 1}}>
-            <ProfilePost />
-            <ProfileMediaPost />
-            <ProfilePost />
+      <ScrollView contentContainerStyle={timelineStyles.scrollView}>
+        <View id="mainContainer" style={timelineStyles.mainContainer}>
+          <Jumbotron />
+          {/* <ScrollView style={{flexGrow: 3, backgroundColor: 'pink'}}> */}
+          <View id="feedArea" style={timelineStyles.feedArea}>
+            <View id="postArea" style={timelineStyles.postArea}>
+              <ProfilePost />
+              <ProfileMediaPost />
+              <ProfilePost />
+            </View>
           </View>
+          {/* </ScrollView> */}
         </View>
-      </View>
-      //   </ScrollView>
+      </ScrollView>
     );
   }
 }

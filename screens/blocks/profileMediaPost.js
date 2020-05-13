@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-
+import styles from '../styles/blockstyles/profileMediaPost';
 class ProfileMediaPost extends React.Component {
   render() {
     return (
-      <View style={{backgroundColor: 'green', flex: 1 / 2, marginBottom: 5}}>
+      <View id="mediaPostContainer" style={styles.mediaPostContainer}>
         <Text> Video/Image Content</Text>
       </View>
     );
