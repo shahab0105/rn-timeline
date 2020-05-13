@@ -1,5 +1,5 @@
 # rn-timeline
-First in the series of templates for react-native mobile applications.This one will focus on newfeeds/blogs-home
+First in the series of templates for react-native mobile applications.This one will focus on timeline/profile-home
 
 ->Modular (just play and play with any rest API)
 
